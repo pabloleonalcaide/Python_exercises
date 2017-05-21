@@ -2,7 +2,7 @@
 
 import MySQLdb
 
-db = MySQLdb.connect("localhost","root","chapuys","pruebaPython")
+db = MySQLdb.connect("localhost","root","","pruebaPython")
 
 cursorCreate = db.cursor()
 cursorInsert = db.cursor()
