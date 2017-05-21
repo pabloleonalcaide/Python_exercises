@@ -1,3 +1,4 @@
+# Rompe una cadena tomando como referencia el separador indicado
 def devPalabras(fichero):
     cadena = ''
     try:
