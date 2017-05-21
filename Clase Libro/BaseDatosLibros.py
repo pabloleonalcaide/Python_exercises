@@ -9,7 +9,7 @@ import MySQLdb
 
 def introducirLibro():
     try:
-        mydb = MySQLdb.connect('localhost', 'root', 'chapuys', 'FONDO_LIBROS')
+        mydb = MySQLdb.connect('localhost', 'root', '', 'FONDO_LIBROS')
         libro = Libro(str(raw_input('Un Titulo: ')) , str(raw_input('Un Autor:')), int(raw_input('número paginas:')),int(raw_input('codigo: ')))
         titulo = libro.getTitulo()
         autor = libro.getAutor()
@@ -26,7 +26,7 @@ def introducirLibro():
 
 def mostrarCatalogo():
     try:
-        mydb = MySQLdb.connect('localhost', 'root', 'chapuys', 'FONDO_LIBROS')
+        mydb = MySQLdb.connect('localhost', 'root', '', 'FONDO_LIBROS')
         cursor = mydb.cursor()
         libros = cursor.execute('SELECT * FROM LIBROS')
         for x in range(libros):
@@ -41,7 +41,7 @@ def mostrarCatalogo():
 
 def mostrarOrdenados():
     try:
-        mydb = MySQLdb.connect('localhost', 'root', 'chapuys', 'FONDO_LIBROS')
+        mydb = MySQLdb.connect('localhost', 'root', '', 'FONDO_LIBROS')
         cursor = mydb.cursor()
         libros = cursor.execute('SELECT * FROM LIBROS order by titulo')
         for x in range(libros):
@@ -58,7 +58,7 @@ def borrarPorCodigo():
     try:
         mostrarCatalogo()
         idLibro = int(raw_input('indica el indice de libro a eliminar'))
-        mydb = MySQLdb.connect('localhost', 'root', 'chapuys', 'FONDO_LIBROS')
+        mydb = MySQLdb.connect('localhost', 'root', '', 'FONDO_LIBROS')
         cursor = mydb.cursor()
         libros = cursor.execute("DELETE FROM LIBROS WHERE codigo ='%s' " % idLibro)
         mydb.commit()
