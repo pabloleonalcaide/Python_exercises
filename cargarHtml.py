@@ -3,7 +3,7 @@ import MySQLdb
 
 def run_query(query=''):
  
- conn = MySQLdb.connect("localhost","root","chapuys","pruebaPython") # Conectar a la base de datos
+ conn = MySQLdb.connect("localhost","root","","pruebaPython") # Conectar a la base de datos
  cursor = conn.cursor() # Crear un cursor
  cursor.execute(query) # Ejecutar una consulta
  if query.upper().startswith('SELECT'):
