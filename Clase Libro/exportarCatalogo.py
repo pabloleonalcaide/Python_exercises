@@ -3,7 +3,7 @@ import MySQLdb
 import webbrowser
 
 def run_query(query=''):
-    conn = MySQLdb.connect("localhost", "root", "chapuys", "FONDO_LIBROS")
+    conn = MySQLdb.connect("localhost", "root", "", "FONDO_LIBROS")
     cursor = conn.cursor()
     cursor.execute(query)
     if query.upper().startswith('SELECT'):
