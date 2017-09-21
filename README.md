@@ -1,4 +1,4 @@
-# Python_exercises
+# Python exercises (the path of a noob)
 ## Some begining exercises with python
 ### Ejercicio Calculadora
 
