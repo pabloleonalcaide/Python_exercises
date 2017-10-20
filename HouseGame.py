@@ -1,11 +1,17 @@
+# Juego de Aventuras, explora la casa y encuentra el tesoro. 
+# La arquitectura del juego no es propia, se trata de la adaptación de una actividad 
+# De aprendizaje (manejo de funciones, uso de import).
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-# Importar los módulos que necesitaremos
+# Importa modulo time
 import time
-# Varias listas con terminología usada en el juego
+
+# Opciones del juego
 verbos = ['ir', 'coger', 'abrir', 'atacar', 'hablar', 'beber', 'comer', 'saltar', \
 'subir', 'bajar', 'inventario','examinar']
+# Objetos usables en el juego
 objetos = ['llave', 'espada', 'copa', 'vaso', 'galletas', 'bombones']
+#Direcciones
 direcciones = ["norte", "sur", "este", "oeste"]
 # Mapa de salidas de cada habitación, identificadas por 3 números, respectivamente,
 # el piso, la fila y la columna
@@ -22,8 +28,8 @@ salidas[(2,1,3)] = ["oeste","norte","sur"]
 salidas[(2,2,1)] = ["norte","este"]
 salidas[(2,2,2)] = ["oeste","este"]
 salidas[(2,2,3)] = ["oeste","norte"]
-# Función que se encarga de describir cada sala, identificada como previamente
-# se ha comentado por una tupla de tres números.
+
+# Describe cada sala, identificada como previamente
 def describir(p,f,c):
 # p es el piso
 # f la fila
@@ -76,7 +82,7 @@ def describir(p,f,c):
 		print s,
 		print
 		print "----------------------------------------------------------------------"
-# Función que muestra en pantalla la introducción del Juego, con pausas.
+# Muestra la introducción del Juego.
 def intro():
 	print "Ante ti está LA MANSIÓN. Te han encargado recuperar una hermosa joya,"
 	print "una piedra preciosa de incalculable valor. Sabes que está custudiada y"
@@ -87,6 +93,7 @@ def intro():
 	time.sleep(1)
 	print
 	raw_input("Pulsa <intro> para empezar el juego.")
+	
 # Función que se encarga de los actos de comer y beber.
 def comerBeber(v,c):
 # v es el verbo; comer o beber
