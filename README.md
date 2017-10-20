@@ -26,6 +26,9 @@ A simple game, choose the correct door, win or loose!
 ###	split.py
 Using split with words
 
+### 	HouseGame.py
+A simple game to play in your terminal - explore the house
+
 ### Trying sql & html & python
 - Cancion.py
 
