@@ -1,3 +1,7 @@
+__author__ = "Pablo Len Alcaide"
+__license__ = "GPL"
+__version__ = "1.0.1"
+
 class Cancion (object):
 	titulo = ""
 	autor = ""
@@ -6,15 +10,17 @@ class Cancion (object):
 	def __init__ (self,titulo,autor):
 		self.titulo = titulo
 		self.autor = autor
-
+		
+	"""Función que solicita el titulo de la canción"""
 	def dame_titulo (self):
 		nombre = raw_input("dime el titulo: ")
 		self.titulo = nombre
-	
+		
+	"""Función que solicita el autor de la canción"""
 	def dame_autor (self):
 		autor = raw_input("dime el autor: ")
 		self.autor = autor
-
+	
 	def pon_titulo(self, titulo):
 		self.titulo=titulo
 
