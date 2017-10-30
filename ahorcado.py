@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-"""Pablo León Alcaide
-Juego de El Ahorcado escrito en Python, experimento de aprendizaje propio """
+__author__ = "Pablo Leon Alcaide"
+__version__ = "1.0"
+
+"""Juego de El Ahorcado escrito en Python, experimento de aprendizaje propio """
 import random
 DRAW = ['''
 *------*
