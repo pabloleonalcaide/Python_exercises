@@ -1,3 +1,5 @@
+__author__ = "Pablo Leon Alcaide"
+__version__ = "1.0"
 # Juego de Aventuras, explora la casa y encuentra el tesoro. 
 # La arquitectura del juego no es propia, se trata de la adaptación de una actividad 
 # De aprendizaje (manejo de funciones, uso de import).
